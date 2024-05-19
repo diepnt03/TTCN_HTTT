@@ -1,21 +1,30 @@
-﻿
-@{
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Login";
 }
 
-<h2>Login</h2>
-@using (Html.BeginForm())
-{
-    <p>
-        <label>Email: </label>
-        <input type="text" name="email" />
-    </p>
-    <p>
-        <label>Mat khau: </label>
-        <input type="text" name="matKhau" />
-    </p>
-    <p>
-        <input type="submit" value="Login" />
-    </p>
-}
-@ViewBag.errMsg
+<div style="width: 400px; margin:30px auto; border: 1px solid #ccc; padding: 20px; background-color: #f9f9f9;">
+    <h2 style="text-align: center;">Đăng nhập</h2>
+    @using (Html.BeginForm())
+    {
+        <p>
+            <label>Email:</label>
+        </p>
+        <p>
+            <input type="text" name="email" style="width: 100%;" />
+        </p>
+        <p>
+            <label>Mật khẩu: </label>
+        </p>
+        <p>
+            <input type="password" name="matKhau" style="width: 100%;" />
+        </p>
+        <p style="text-align: center;">
+            <input type="submit" value="Login" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; cursor: pointer;" />
+        </p>
+    }
+    @if (!String.IsNullOrEmpty(ViewBag.errMsg))
+    {
+        <p style="color: red; text-align: center;">@ViewBag.errMsg</p>
+    }
+</div>

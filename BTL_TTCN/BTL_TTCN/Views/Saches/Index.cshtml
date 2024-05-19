@@ -29,7 +29,10 @@
     </p>
 }
 
-
+@if (!String.IsNullOrEmpty(ViewBag.Message))
+{
+    <p>@ViewBag.Message</p>
+}
 
 
 <table class="table">
