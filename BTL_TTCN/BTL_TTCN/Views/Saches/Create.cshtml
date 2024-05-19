@@ -7,10 +7,10 @@
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("Create", "Saches", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Sach</h4>
         <hr />
@@ -34,9 +34,11 @@
         <div class="form-group">
             @Html.LabelFor(model => model.AnhMinhHoa, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.AnhMinhHoa, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.AnhMinhHoa, "", new { @class = "text-danger" })
+                <img id="output" class="img-rounded" alt="Ảnh sản phẩm" width="180" src="~/Content/Sach/noImage.png" />
+                <p><label for="ufile" style="cursor: pointer">Chọn file ảnh</label></p>
+                <input name="AnhFile" id="ufile" type="file" style="display: none" onchange="loadFile(event)" />
             </div>
+
         </div>
 
         <div class="form-group">
@@ -83,6 +85,21 @@
     @Html.ActionLink("Back to List", "Index")
 </div>
 
+@if (ViewBag.Error != null)
+{
+    <br />
+    <div class="alert alert-danger" role="alert">@ViewBag.Error</div>
+}
+
+
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+
+<script>
+    var loadFile = function (event) {
+        var image = document.getElementById("output");
+        image.src = URL.createObjectURL(event.target.files[0]);
+    }
+</script>

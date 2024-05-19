@@ -12,11 +12,12 @@ namespace BTL_TTCN
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.MapMvcAttributeRoutes();//khai báo sử dụng định tuyến thuộc tính
 
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Saches", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

@@ -27,9 +27,12 @@
             @Html.DisplayFor(model => model.TenSach)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.AnhMinhHoa)
-        </dt>
+        <dd>
+            @{
+                var path = "~/Content/Sach/" + Model.AnhMinhHoa;
+                <img src="@Url.Content(path)" width="150px" />
+            }
+        </dd>
 
         <dd>
             @Html.DisplayFor(model => model.AnhMinhHoa)

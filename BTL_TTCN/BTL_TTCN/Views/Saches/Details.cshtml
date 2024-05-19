@@ -31,7 +31,10 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AnhMinhHoa)
+            @{
+                var path = "~/Content/Sach/" + Model.AnhMinhHoa;
+                <img src="@Url.Content(path)" width="150px" />
+            }
         </dd>
 
         <dt>

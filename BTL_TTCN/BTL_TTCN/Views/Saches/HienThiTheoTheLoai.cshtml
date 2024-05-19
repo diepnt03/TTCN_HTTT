@@ -1,25 +1,11 @@
 ﻿@model IEnumerable<BTL_TTCN.Models.Sach>
-
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "HienThiTheoTheLoai";
 }
-
-<h2>Index</h2>
-
+<h2>HienThiTheoTheLoai</h2>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
-@using (Html.BeginForm())
-{
-<p>
-    Nhập tên sách:
-    @Html.TextBox("SearchString")
-    <input type="submit" value="Tìm" />
-</p>
-}
-
-
 <table class="table">
     <tr>
         <th>

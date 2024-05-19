@@ -14,11 +14,27 @@ namespace BTL_TTCN.Controllers
     {
         private TTCN db = new TTCN();
 
-        // GET: Saches
-        public ActionResult Index()
+        public ActionResult Index(string SearchString)
         {
-            var saches = db.Saches.Include(s => s.TheLoai);
-            return View(saches.ToList());
+            var sach = db.Saches.Include(t => t.TheLoai);
+            if (!String.IsNullOrEmpty(SearchString))
+            {
+                sach = sach.Where(p => p.TenSach == SearchString);
+            }
+            return View(sach.ToList());
+        }
+
+        public PartialViewResult CategoryMenu()
+        {
+            var li = db.TheLoais.ToList();
+            return PartialView(li);
+        }
+
+        [Route("SachTheoTheLoai/{MaTheLoai}")]
+        public ActionResult HienThiTheoTheLoai(string MaTheLoai)
+        {
+            var list = db.Saches.Where(p => p.MaTheLoai == MaTheLoai).ToList();
+            return View(list);
         }
 
         // GET: Saches/Details/5
@@ -50,15 +66,34 @@ namespace BTL_TTCN.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MaSach,TenSach,AnhMinhHoa,GiaBan,SoLuong,DanhGia,MaTheLoai")] Sach sach)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Saches.Add(sach);
-                db.SaveChanges();
+                if (ModelState.IsValid)
+                {
+                    sach.AnhMinhHoa = "";
+                    var f = Request.Files["AnhFile"];
+                    if (f != null && f.ContentLength > 0)
+                    {
+                        string FileName = System.IO.Path.GetFileName(f.FileName);
+                        Console.WriteLine(FileName);
+                        string UploadPath = Server.MapPath("~/Content/Sach/" + FileName);
+                        f.SaveAs(UploadPath);
+                        sach.AnhMinhHoa = FileName;
+                    }
+
+                    db.Saches.Add(sach);
+                    db.SaveChanges();
+                }
                 return RedirectToAction("Index");
+
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = "Lỗi nhập dữ liệu" + ex.Message;
+                ViewBag.MaTheLoai = new SelectList(db.TheLoais, "MaTheLoai", "TenTheLoai", sach.MaTheLoai);
+                return View(sach);
             }
 
-            ViewBag.MaTheLoai = new SelectList(db.TheLoais, "MaTheLoai", "TenTheLoai", sach.MaTheLoai);
-            return View(sach);
         }
 
         // GET: Saches/Edit/5
@@ -84,14 +119,30 @@ namespace BTL_TTCN.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "MaSach,TenSach,AnhMinhHoa,GiaBan,SoLuong,DanhGia,MaTheLoai")] Sach sach)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Entry(sach).State = EntityState.Modified;
-                db.SaveChanges();
+                if (ModelState.IsValid)
+                {
+                    var f = Request.Files["AnhFile"];
+                    if (f != null && f.ContentLength > 0)
+                    {
+                        string FileName = System.IO.Path.GetFileName(f.FileName);
+                        Console.WriteLine(FileName);
+                        string UploadPath = Server.MapPath("~/Content/Images/" + FileName);
+                        f.SaveAs(UploadPath);
+                        sach.AnhMinhHoa = FileName;
+                    }
+                    db.Entry(sach).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
                 return RedirectToAction("Index");
             }
-            ViewBag.MaTheLoai = new SelectList(db.TheLoais, "MaTheLoai", "TenTheLoai", sach.MaTheLoai);
-            return View(sach);
+            catch (Exception e)
+            {
+                ViewBag.Error = "Lỗi nhập dữ liệu" + e;
+                ViewBag.MaTheLoai = new SelectList(db.TheLoais, "MaTheLoai", "TenTheLoai", sach.MaTheLoai);
+                return View(sach);
+            }
         }
 
         // GET: Saches/Delete/5
@@ -115,9 +166,17 @@ namespace BTL_TTCN.Controllers
         public ActionResult DeleteConfirmed(string id)
         {
             Sach sach = db.Saches.Find(id);
-            db.Saches.Remove(sach);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                db.Saches.Remove(sach);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = "Không xóa được bản ghi này" + ex;
+                return View("Delete", sach);
+            }
         }
 
         protected override void Dispose(bool disposing)

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<BTL_TTCN.Models.TheLoai>
+@*Hiển thị link các thể loại trên menu*@
+@foreach (var item in Model)
+{
+    var url = "/SachTheoTheLoai/" + item.MaTheLoai; //gõ chính xác định tuyến
+    <a href="@url">@item.TenTheLoai</a>
+
+
+    @*<a href="">@item.Tenphong</a>*@
+    <label>&nbsp;|&nbsp;</label>
+}
+    
