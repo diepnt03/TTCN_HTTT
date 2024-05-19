@@ -2,63 +2,116 @@
 @{
     ViewBag.Title = "HienThiTheoTheLoai";
 }
-<h2>HienThiTheoTheLoai</h2>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TheLoai.TenTheLoai)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TenSach)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.AnhMinhHoa)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.GiaBan)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SoLuong)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DanhGia)
-        </th>
-        <th></th>
-    </tr>
+<center>
+    @Html.ActionLink("Xem danh sách sách", "Index", "Saches")<label>&nbsp;|&nbsp;</label>
+    @{Html.RenderAction("CategoryMenu", "Saches");}
+</center>
+@if (Session["email"] != null)
+{
+    <p>
+        <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Create", "Saches")'">Thêm mới</button>
+    </p>
+}
 
-    @foreach (var item in Model)
+<table class="table">
+    @if (Session["email"] == null)
+    {
+        <style>
+            td {
+                border: 1px solid #dddddd;
+            }
+
+            .centered {
+                text-align: center;
+            }
+        </style>
+        <tr>
+            @foreach (var item in Model)
+            {
+                <td class="centered">
+                    <p>
+                        @{
+                            var path = "~/Content/Sach/" + item.AnhMinhHoa;
+                        }
+                        <img src="@Url.Content(path)" width="150px" />
+                    </p>
+                    <p>
+                        Đánh giá: @Html.DisplayFor(modelItem => item.DanhGia)
+                    </p>
+                    <p>
+                        Thể Loại: @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
+                    </p>
+                    <p>
+                        Tên Sách: @Html.DisplayFor(modelItem => item.TenSach)
+                    </p>
+                    <p>
+                        Giá: @Html.DisplayFor(modelItem => item.GiaBan)
+                    </p>
+                    <p>
+                        Còn hàng: @Html.DisplayFor(modelItem => item.SoLuong)
+                    </p>
+                    <p>
+                        <input type="submit" value="Mua" />
+                    </p>
+                </td>
+            }
+        </tr>
+    }
+    else
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TenSach)
-            </td>
-            <td>
-                @{
-                    var path = "~/Content/Sach/" + item.AnhMinhHoa;
-                    <img src="@Url.Content(path)" width="150px" />
-                }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.GiaBan)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SoLuong)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DanhGia)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.MaSach }) |
-                @Html.ActionLink("Details", "Details", new { id = item.MaSach }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.MaSach })
-            </td>
+            <th>
+                @Html.DisplayNameFor(model => model.TheLoai.TenTheLoai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenSach)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnhMinhHoa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GiaBan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SoLuong)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DanhGia)
+            </th>
+            <th></th>
         </tr>
+
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenSach)
+                </td>
+                <td>
+                    @{
+                        var path = "~/Content/Sach/" + item.AnhMinhHoa;
+                        <img src="@Url.Content(path)" width="150px" />
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GiaBan)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SoLuong)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DanhGia)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.MaSach }) |
+                    @Html.ActionLink("Chi tiết", "Details", new { id = item.MaSach }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.MaSach })
+                </td>
+            </tr>
+        }
     }
 
 </table>
