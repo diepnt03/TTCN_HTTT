@@ -21,7 +21,14 @@ namespace BTL_TTCN.Controllers
             {
                 sach = sach.Where(p => p.TenSach == SearchString);
             }
-            return View(sach.ToList());
+
+            var sachList = sach.ToList();
+            if (sachList.Count == 0)
+            {
+                ViewBag.Message = "Không tìm thấy sách";
+            }
+
+            return View(sachList);
         }
 
         public PartialViewResult CategoryMenu()

@@ -28,7 +28,7 @@ namespace BTL_TTCN.Controllers
             var user = db.TaiKhoans.Where(u => u.Email == email && u.MatKhau== matKhau).FirstOrDefault();
             if (user == null)
             {
-                ViewBag.errMsg = "Sai ten dang nhap va mat khau";
+                ViewBag.errMsg = "Sai tên đăng nhập hoặc mật khẩu";
                 return View("Login");
             }
             else
