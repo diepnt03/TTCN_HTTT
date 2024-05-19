@@ -8,19 +8,46 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    <center>
-        @Html.ActionLink("Index", "Index", "Saches")<label>&nbsp;|&nbsp;</label>
-        @{Html.RenderAction("CategoryMenu", "Saches");}
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @if (Session["email"] == null)
+                {
+                    @Html.ActionLink("Danh Mục", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
+                }
+                else
+                {
+                    @Html.ActionLink("Quản Lý Sách", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
+                }
 
-        @if (Session["email"] == null)
-        {
-            <a href="/Login/Login">Login</a>}
-        else
-        {
-            <label>Welcome @Session["email"] &nbsp;|&nbsp;</label>
-            <a href="/Login/Logout">Logout</a>
-        }
-    </center>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                    @if (Session["email"] == null)
+                    {
+                        <li>
+                            <a href="/Login/Login">Login</a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <a href = "">Welcome @Session["email"] &nbsp;|&nbsp;</a>
+                        </li>
+                        <li>  <a href="/Login/Logout">Logout</a></li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    
 
 
 
