@@ -18,6 +18,7 @@ namespace BTL_TTCN
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Saches", action = "Index", id = UrlParameter.Optional }
+                //defaults: new { controller = "Home", action = "About", id = UrlParameter.Optional }
             );
         }
     }

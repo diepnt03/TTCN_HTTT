@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -16,18 +17,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                @Html.ActionLink("Nhà sách Phương Nam", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
                 @if (Session["email"] == null)
                 {
-                    @Html.ActionLink("Danh Mục", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Danh mục", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Tài khoản", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
                 }
                 else
                 {
-                    @Html.ActionLink("Quản Lý Sách", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Quản lý sách", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Bảo trì danh mục", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Quản lý tài khoản", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Bảo trì đơn hàng", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
                 }
 
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
 
                     @if (Session["email"] == null)
                     {
@@ -47,15 +53,13 @@
             </div>
         </div>
     </div>
-    
-
 
 
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Nhóm 9 - Thực tập chuyên ngành Hệ Thống Thông Tin</p>
         </footer>
     </div>
 

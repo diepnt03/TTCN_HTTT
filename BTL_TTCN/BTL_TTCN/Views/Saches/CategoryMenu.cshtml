@@ -1,12 +1,29 @@
 ﻿@model IEnumerable<BTL_TTCN.Models.TheLoai>
-@*Hiển thị link các thể loại trên menu*@
-@foreach (var item in Model)
-{
-    var url = "/SachTheoTheLoai/" + item.MaTheLoai; //gõ chính xác định tuyến
-    <a href="@url">@item.TenTheLoai</a>
 
+<style>
+    .category-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-    @*<a href="">@item.Tenphong</a>*@
-    <label>&nbsp;|&nbsp;</label>
-}
-    
+        .category-container a {
+            background-color: #90ee90;
+            color: #ffffff;
+            padding: 10px 15px;
+            text-decoration: none;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+            .category-container a:hover {
+                background-color: #77dd77;
+            }
+</style>
+
+<div class="category-container">
+    @foreach (var item in Model)
+    {
+        var url = "/SachTheoTheLoai/" + item.MaTheLoai;
+        <a href="@url">@item.TenTheLoai</a>
+    }
+</div>

@@ -3,28 +3,33 @@
     ViewBag.Title = "Login";
 }
 
-<div style="width: 400px; margin:30px auto; border: 1px solid #ccc; padding: 20px; background-color: #f9f9f9;">
-    <h2 style="text-align: center;">Đăng nhập</h2>
-    @using (Html.BeginForm())
-    {
-        <p>
-            <label>Email:</label>
-        </p>
-        <p>
-            <input type="text" name="email" style="width: 100%;" />
-        </p>
-        <p>
-            <label>Mật khẩu: </label>
-        </p>
-        <p>
-            <input type="password" name="matKhau" style="width: 100%;" />
-        </p>
-        <p style="text-align: center;">
-            <input type="submit" value="Login" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; cursor: pointer;" />
-        </p>
-    }
-    @if (!String.IsNullOrEmpty(ViewBag.errMsg))
-    {
-        <p style="color: red; text-align: center;">@ViewBag.errMsg</p>
-    }
+<div style="width: 600px; margin: 30px auto; border: 1px solid #ccc; padding: 20px; background-color: #f9f9f9; display: flex;">
+    <div style="flex: 1; margin-right: 20px; margin-top: 30px;">
+        <img src="~/Content/bg.jpg" alt="Login Image" style="max-width: 100%; height: auto;" />
+    </div>
+    <div style="flex: 1;">
+        <h2 style="text-align: center;">Đăng nhập</h2>
+        @using (Html.BeginForm())
+        {
+            <p>
+                <label>Email:</label>
+            </p>
+            <p>
+                <input type="text" name="email" style="width: 100%;" />
+            </p>
+            <p>
+                <label>Mật khẩu: </label>
+            </p>
+            <p>
+                <input type="password" name="matKhau" style="width: 100%;" />
+            </p>
+            <p style="text-align: center;">
+                <input type="submit" value="Login" style="padding: 10px 20px; background-color: #007bff; color: #fff; border: none; cursor: pointer;" />
+            </p>
+        }
+        @if (!String.IsNullOrEmpty(ViewBag.errMsg))
+        {
+            <p style="color: red; text-align: center;">@ViewBag.errMsg</p>
+        }
+    </div>
 </div>
