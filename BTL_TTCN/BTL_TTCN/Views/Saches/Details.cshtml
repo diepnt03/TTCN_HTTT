@@ -7,7 +7,6 @@
 <h2>Chi tiết sách</h2>
 
 <div>
-    <h4>Sách</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -64,6 +63,17 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Sửa", "Edit", new { id = Model.MaSach }) |
+    @if (Session["email"] != null)
+    {
+        @Html.ActionLink("Sửa", "Edit", new { id = Model.MaSach })
+    }
+    else
+    {
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Mua ngay" class="btn btn-default" />
+            </div>
+        </div>
+    }
     @Html.ActionLink("Quay lại", "Index")
 </p>

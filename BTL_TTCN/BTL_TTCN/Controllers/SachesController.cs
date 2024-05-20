@@ -41,6 +41,10 @@ namespace BTL_TTCN.Controllers
         public ActionResult HienThiTheoTheLoai(string MaTheLoai)
         {
             var list = db.Saches.Where(p => p.MaTheLoai == MaTheLoai).ToList();
+            if (list.Count == 0)
+            {
+                ViewBag.Message = "Không có sách thuộc thể loại này";
+            }
             return View(list);
         }
 

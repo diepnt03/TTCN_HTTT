@@ -3,14 +3,19 @@
     ViewBag.Title = "HienThiTheoTheLoai";
 }
 <center>
-    @Html.ActionLink("Xem danh sách sách", "Index", "Saches")<label>&nbsp;|&nbsp;</label>
     @{Html.RenderAction("CategoryMenu", "Saches");}
 </center>
+<p></p>
 @if (Session["email"] != null)
 {
     <p>
         <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Create", "Saches")'">Thêm mới</button>
     </p>
+}
+
+@if (!String.IsNullOrEmpty(ViewBag.Message))
+{
+    <p>@ViewBag.Message</p>
 }
 
 <table class="table">
