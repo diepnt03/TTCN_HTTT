@@ -195,6 +195,7 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Saches\CategoryMenu.cshtml" />
     <Content Include="Views\Saches\HienThiTheoTheLoai.cshtml" />
+    <Content Include="Views\Saches\DanhSachSanPham.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

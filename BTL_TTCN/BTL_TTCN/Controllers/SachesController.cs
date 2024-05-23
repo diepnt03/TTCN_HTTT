@@ -31,6 +31,23 @@ namespace BTL_TTCN.Controllers
             return View(sachList);
         }
 
+        public ActionResult DanhSachSanPham(string SearchString)
+        {
+            var sach = db.Saches.Include(t => t.TheLoai);
+            if (!String.IsNullOrEmpty(SearchString))
+            {
+                sach = sach.Where(p => p.TenSach == SearchString);
+            }
+
+            var sachList = sach.ToList();
+            if (sachList.Count == 0)
+            {
+                ViewBag.Message = "Không tìm thấy sách";
+            }
+
+            return View(sachList);
+        }
+
         public PartialViewResult CategoryMenu()
         {
             var li = db.TheLoais.ToList();

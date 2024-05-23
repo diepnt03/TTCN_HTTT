@@ -20,12 +20,12 @@
                 @Html.ActionLink("Nhà sách Phương Nam", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
                 @if (Session["email"] == null)
                 {
-                    @Html.ActionLink("Danh mục", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Danh mục", "DanhSachSanPham", "Saches", new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Tài khoản", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
                 }
                 else
                 {
-                    @Html.ActionLink("Quản lý sách", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Quản lý sách", "DanhSachSanPham", "Saches", new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Bảo trì danh mục", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Quản lý tài khoản", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
                     @Html.ActionLink("Bảo trì đơn hàng", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
