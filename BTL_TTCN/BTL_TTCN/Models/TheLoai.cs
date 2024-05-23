@@ -1,8 +1,7 @@
-﻿namespace BTL_TTCN.Models
+namespace BTL_TTCN.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -18,13 +17,9 @@
 
         [Key]
         [StringLength(50)]
-        [Required(ErrorMessage = "Mã thể loại không được để trống")]
-        [DisplayName("Mã thể loại")]
         public string MaTheLoai { get; set; }
 
         [StringLength(50)]
-        [Required(ErrorMessage = "Tên thể loại không được để trống")]
-        [DisplayName("Tên thể loại")]
         public string TenTheLoai { get; set; }
 
         [StringLength(50)]

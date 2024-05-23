@@ -1,0 +1,116 @@
+﻿
+@model IEnumerable<BTL_TTCN.Models.DanhMuc>
+@{
+    ViewBag.Title = "Danh mục";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section naviheader{
+
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="/admin" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="/admin/danhmuc" class="nav-link">Danh Mục</a>
+        </li>
+    </ul>
+
+}
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Bảo trì danh mục</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">@ViewBag.Title</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Danh sách danh mục</h3>
+
+            <div class="card-tools">
+                <a href="/admin/danhmuc/add" class="btn btn-primary">Thêm mới</a>
+            </div>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <td>STT</td>
+                        <td>Tên danh mục</td>
+                        <td></td>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @if (Model!=null&&Model.Any())
+                    {
+                        foreach (var item in Model)
+                        {
+
+                            <tr id="trow_@item.MaDanhMuc">
+                                <td>@item.MaDanhMuc</td>
+                                <td>@item.TenDanhMuc</td>
+                                <td>
+                                    <a href="/admin/danhmuc/edit/@item.MaDanhMuc" class="btn btn-sm btn-primary">Sửa</a>
+                                    <a href="#" data-id="@item.MaDanhMuc" class="btn btn-sm btn-danger btnDelete">Xóa</a>
+                                </td>
+                            </tr>
+                        }
+
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4">Không có bản ghi nào!</td>
+                        </tr>
+
+
+                    }
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+</section>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('body').on('click', '.btnDelete', function () {
+                var id = $(this).data("id");
+                var conf = confirm("Bạn có muốn xóa bản ghi này");
+                if (conf === true) {
+                    $.ajax({
+                        url: '/admin/danhmuc/delete',
+                        type: 'POST',
+                        data: { MaDanhMuc: id },
+
+                        success: function (rs) {
+                            if (rs.success) {
+                                $('#trow_' + id).remove();
+                            }
+                        }
+                    });
+                }
+            });
+        })
+    </script>
+
+
+} 

@@ -13,12 +13,17 @@ namespace BTL_TTCN.Models
         }
 
         public virtual DbSet<DanhMuc> DanhMucs { get; set; }
+        public virtual DbSet<DonHang> DonHangs { get; set; }
         public virtual DbSet<Sach> Saches { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<TheLoai> TheLoais { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<DonHang>()
+                .Property(e => e.TongTien)
+                .HasPrecision(19, 4);
+
             modelBuilder.Entity<Sach>()
                 .Property(e => e.GiaBan)
                 .HasPrecision(19, 4);

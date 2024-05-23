@@ -1,0 +1,156 @@
+﻿@model IPagedList<BTL_TTCN.Models.DonHang>
+@using PagedList.Mvc;
+@using PagedList;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    ViewBag.Title = "Danh sách sách";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section naviheader{
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="/admin" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="/admin/donhang" class="nav-link">Danh sách đơn hàng</a>
+        </li>
+    </ul>
+
+}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Quản lý đơn hàng</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Quản lý đơn hàng</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="content">
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Danh sách đơn hàng</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-6">
+                    @using (Html.BeginForm("Index", "DonHang", FormMethod.Get, new { }))
+                    {
+                        <div class="input-group input-group-sm">
+                            @Html.TextBox("Searchtext")
+
+                            <span class="input-group-append">
+                                <button type="submit" class="btn btn-info btn-flat">Tìm kiếm</button>
+                            </span>
+                        </div>
+                    }
+
+
+                </div>
+            </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <td>STT</td>
+                        <td>Ngày lập</td>
+                        <td>Tên người mua</td>
+                        <td>Thanh toán</td>
+                        <td>Giao hàng</td>
+                        <td>Tổng tiền</td>
+                        <td></td>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @if (Model!=null&&Model.Any())
+                    {
+                        var i = ((ViewBag.Page-1)*ViewBag.PageSize)+1;
+                        foreach (var item in Model)
+                        {
+
+                            <tr id="trow_@item.MaDonHang">
+                                <td>@i</td>
+                                <td>@item.NgayLap</td>
+                                <td>@item.TaiKhoan.TenNguoiNhan</td>
+                                <td>@item.ThanhToan</td>
+                                <td>@item.GiaoHang</td>
+                                <td>@item.TongTien</td>
+                                <td>
+                                    <a href="#" data-id="@item.MaDonHang" class="btn btn-sm btn-danger btnDelete">Xóa</a>
+                                </td>
+                            </tr>
+                            i++;
+                        }
+
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4">Không có bản ghi nào!</td>
+                        </tr>
+
+
+                    }
+                </tbody>
+
+            </table>
+
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+            Footer
+        </div>
+        <!-- /.card-footer-->
+    </div>
+    <!-- /.card -->
+
+</section>
+<div id="dialog">
+    <iframe id="myIframe" style="border:0;width:100%;height:100%"></iframe>
+</div>
+@section scripts{
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('body').on('click', '.btnDelete', function () {
+                var id = $(this).data("id");
+                var conf = confirm("Bạn có muốn xóa bản ghi này");
+                if (conf === true) {
+                    $.ajax({
+                        url: '/admin/sach/delete',
+                        type: 'POST',
+                        data: { id: id },
+
+                        success: function (rs) {
+                            if (rs.success) {
+                                $('#trow_' + id).remove();
+                            }
+                        }
+                    });
+                }
+            });
+        });
+
+
+    </script>
+
+
+} 

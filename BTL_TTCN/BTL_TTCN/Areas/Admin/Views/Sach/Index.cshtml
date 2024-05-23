@@ -1,0 +1,134 @@
+﻿@model IPagedList<BTL_TTCN.Models.Sach>
+@using PagedList.Mvc;
+@using PagedList;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section naviheader{
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+     
+    </ul>
+
+}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Bảo trì sách</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Bảo trì sách</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="content">
+
+    <!-- Default box -->
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Danh sách sách</h3>
+
+            <div class="card-tools">
+                <a href="/admin/sach/add" class="btn btn-primary">Thêm mới</a>
+            </div>
+        </div>
+        <div class="card-body">
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <td>STT</td>
+                        <td>Hình ảnh</td>
+                        <td>Tên sách</td>
+                        <td>Thể loại</td>
+                        <td>Số lượng</td>
+                        <td>Giá</td>
+                        <td></td>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    @if (Model!=null&&Model.Any())
+                    {
+                        var i = ((ViewBag.Page-1)*ViewBag.PageSize)+1;
+                        foreach (var item in Model)
+                        {
+                           
+                            <tr id="trow_@item.MaSach">
+                                <td>@i</td>
+                                <td><img class="imgproduct" data-id="@item.MaSach" src="~/Content/Sach/@item.AnhMinhHoa" width="50" /></td>
+                                <td>@item.TenSach</td>
+                                <td>@item.TheLoai.TenTheLoai</td>
+                                <td>@item.SoLuong</td>
+                                <td>@item.GiaBan</td>                                
+                                <td>
+                                    <a href="/admin/sach/edit/@item.MaSach" class="btn btn-sm btn-primary">Sửa</a>
+                                    <a href="#" data-id="@item.MaSach" class="btn btn-sm btn-danger btnDelete">Xóa</a>
+                                </td>
+                            </tr>
+                            i++;
+                        }
+
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="4">Không có bản ghi nào!</td>
+                        </tr>
+
+
+                    }
+                </tbody>
+
+            </table>
+
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+        </div>
+    </div>
+
+</section>
+<div id="dialog">
+    <iframe id="myIframe" style="border:0;width:100%;height:100%"></iframe>
+</div>
+@section scripts{
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            
+            $('body').on('click', '.btnDelete', function () {
+                var id = $(this).data("id");
+                var conf = confirm("Bạn có muốn xóa bản ghi này");
+                if (conf === true) {
+                    $.ajax({
+                        url: '/admin/sach/delete',
+                        type: 'POST',
+                        data: { id: id },
+
+                        success: function (rs) {
+                            if (rs.success) {
+                                $('#trow_' + id).remove();
+                            }
+                        }
+                    });
+                }
+            });
+        });
+
+
+    </script>
+
+
+} 
