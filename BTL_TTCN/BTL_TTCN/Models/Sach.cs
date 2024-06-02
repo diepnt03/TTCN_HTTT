@@ -1,4 +1,4 @@
-namespace BTL_TTCN.Models
+﻿namespace BTL_TTCN.Models
 {
     using System;
     using System.Collections.Generic;
@@ -11,16 +11,25 @@ namespace BTL_TTCN.Models
     {
         [Key]
         [StringLength(50)]
+        [Required(ErrorMessage = "Vui lòng nhập mã sách")]
+
         public string MaSach { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "Vui lòng nhập mã sách")]
+
         public string TenSach { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "Vui lòng chọn ảnh minh họa")]
+
         public string AnhMinhHoa { get; set; }
 
         [Column(TypeName = "money")]
+        [Required(ErrorMessage = "Vui lòng nhập giá bán")]
+
         public decimal? GiaBan { get; set; }
+        [Required(ErrorMessage = "Vui lòng nhập số lượng")]
 
         public double? SoLuong { get; set; }
 

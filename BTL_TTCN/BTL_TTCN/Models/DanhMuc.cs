@@ -1,11 +1,11 @@
-namespace BTL_TTCN.Models
+﻿namespace BTL_TTCN.Models
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
-
+    using System.ComponentModel;
     [Table("DanhMuc")]
     public partial class DanhMuc
     {
@@ -17,12 +17,15 @@ namespace BTL_TTCN.Models
 
         [Key]
         [StringLength(50)]
+        [Required(ErrorMessage = "Vui lòng nhập mã danh mục")]
         public string MaDanhMuc { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "Vui lòng nhập tên danh mục")]
         public string TenDanhMuc { get; set; }
 
         [StringLength(50)]
+        [Required(ErrorMessage = "Vui lòng nhập mô tả")]
         public string MoTa { get; set; }
 
         [Column(TypeName = "date")]

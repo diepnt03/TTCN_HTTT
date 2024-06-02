@@ -3,52 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\areas\\admin\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\controllers\\taikhoancontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\views\\saches\\hienthitheotheloai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\views\\saches\\hienthitheotheloai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\areas\\admin\\controllers\\sachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\controllers\\sachcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\views\\saches\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\views\\saches\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\btl_ttcn\\areas\\admin\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\controllers\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\controllers\\sachescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\controllers\\sachescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\areas\\admin\\controllers\\danhmuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\controllers\\danhmuccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\views\\saches\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\views\\saches\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\areas\\admin\\views\\danhmuc\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\views\\danhmuc\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\areas\\admin\\views\\taikhoan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\views\\taikhoan\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\areas\\admin\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\areas\\admin\\views\\danhmuc\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\views\\danhmuc\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\areas\\admin\\views\\danhmuc\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\views\\danhmuc\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\areas\\admin\\views\\sach\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\views\\sach\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\areas\\admin\\views\\sach\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\views\\sach\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\views\\saches\\categorymenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\views\\saches\\categorymenu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|c:\\users\\nguye\\ttcn_httt\\btl_ttcn\\btl_ttcn\\areas\\admin\\views\\sach\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\views\\sach\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\btl_ttcn\\areas\\admin\\views\\sach\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0E24CBBC-09A2-4371-97F3-CFD066F5CDEB}|BTL_TTCN\\BTL_TTCN.csproj|solutionrelative:btl_ttcn\\areas\\admin\\views\\sach\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,158 +46,93 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SachesController.cs",
+              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Controllers\\SachesController.cs",
+              "RelativeDocumentMoniker": "BTL_TTCN\\Controllers\\SachesController.cs",
+              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Controllers\\SachesController.cs",
+              "RelativeToolTip": "BTL_TTCN\\Controllers\\SachesController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-02T09:26:22.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SachController.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Controllers\\SachController.cs",
-              "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Controllers\\SachController.cs",
-              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Controllers\\SachController.cs",
-              "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Controllers\\SachController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T13:04:25.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DanhMucController.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Controllers\\DanhMucController.cs",
-              "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Controllers\\DanhMucController.cs",
-              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Controllers\\DanhMucController.cs",
-              "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Controllers\\DanhMucController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T13:04:22.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\DanhMuc\\Edit.cshtml",
-              "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Views\\DanhMuc\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\DanhMuc\\Edit.cshtml",
-              "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Views\\DanhMuc\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T13:01:08.207Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Add.cshtml",
-              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\DanhMuc\\Add.cshtml",
-              "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Views\\DanhMuc\\Add.cshtml",
-              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\DanhMuc\\Add.cshtml",
-              "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Views\\DanhMuc\\Add.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAAEQAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T11:39:24.379Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\DanhMuc\\Index.cshtml",
-              "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Views\\DanhMuc\\Index.cshtml",
-              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\DanhMuc\\Index.cshtml",
-              "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Views\\DanhMuc\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Views\\Saches\\Index.cshtml",
+              "RelativeDocumentMoniker": "BTL_TTCN\\Views\\Saches\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Views\\Saches\\Index.cshtml",
+              "RelativeToolTip": "BTL_TTCN\\Views\\Saches\\Index.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T11:39:24.816Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\TaiKhoan\\Index.cshtml",
-              "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Views\\TaiKhoan\\Index.cshtml",
-              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\TaiKhoan\\Index.cshtml",
-              "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Views\\TaiKhoan\\Index.cshtml",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAAAGkAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T11:34:14.943Z",
+              "WhenOpened": "2024-06-02T09:26:11.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TaiKhoanController.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Controllers\\TaiKhoanController.cs",
-              "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Controllers\\TaiKhoanController.cs",
-              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Controllers\\TaiKhoanController.cs",
-              "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Controllers\\TaiKhoanController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T11:33:55.503Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Index.cshtml",
-              "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Index.cshtml",
-              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Index.cshtml",
-              "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Index.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAABDAAAA",
+              "Title": "HienThiTheoTheLoai.cshtml",
+              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Views\\Saches\\HienThiTheoTheLoai.cshtml",
+              "RelativeDocumentMoniker": "BTL_TTCN\\Views\\Saches\\HienThiTheoTheLoai.cshtml",
+              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Views\\Saches\\HienThiTheoTheLoai.cshtml",
+              "RelativeToolTip": "BTL_TTCN\\Views\\Saches\\HienThiTheoTheLoai.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T11:25:45.31Z",
+              "WhenOpened": "2024-06-02T09:26:10.48Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Views\\Saches\\Create.cshtml",
+              "RelativeDocumentMoniker": "BTL_TTCN\\Views\\Saches\\Create.cshtml",
+              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Views\\Saches\\Create.cshtml",
+              "RelativeToolTip": "BTL_TTCN\\Views\\Saches\\Create.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-02T09:26:05.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoryMenu.cshtml",
+              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Views\\Saches\\CategoryMenu.cshtml",
+              "RelativeDocumentMoniker": "BTL_TTCN\\Views\\Saches\\CategoryMenu.cshtml",
+              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Views\\Saches\\CategoryMenu.cshtml",
+              "RelativeToolTip": "BTL_TTCN\\Views\\Saches\\CategoryMenu.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-02T09:25:31.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Edit.cshtml",
               "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Edit.cshtml",
               "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Edit.cshtml",
               "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Edit.cshtml",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAEcAAAAqAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFsAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T11:24:37.02Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Add.cshtml",
-              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Add.cshtml",
-              "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Add.cshtml",
-              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Add.cshtml",
-              "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Add.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T11:20:40.443Z",
+              "WhenOpened": "2024-06-02T09:22:52.25Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\DonHang\\Index.cshtml",
-              "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Views\\DonHang\\Index.cshtml",
-              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\DonHang\\Index.cshtml",
-              "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Views\\DonHang\\Index.cshtml",
-              "ViewState": "AQIAAGMAAAAAAAAAAAAAABIAAABIAAAA",
+              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Index.cshtml",
+              "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Index.cshtml",
+              "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Views\\Sach\\Index.cshtml",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAAAEYAAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T10:54:59.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DonHangController.cs",
-              "DocumentMoniker": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Controllers\\DonHangController.cs",
-              "RelativeDocumentMoniker": "BTL_TTCN\\Areas\\Admin\\Controllers\\DonHangController.cs",
-              "ToolTip": "C:\\Users\\nguye\\TTCN_HTTT\\BTL_TTCN\\BTL_TTCN\\Areas\\Admin\\Controllers\\DonHangController.cs",
-              "RelativeToolTip": "BTL_TTCN\\Areas\\Admin\\Controllers\\DonHangController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAuwBwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-22T18:31:10.719Z",
+              "WhenOpened": "2024-05-23T11:25:45.31Z",
               "EditorCaption": ""
             }
           ]

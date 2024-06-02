@@ -3202,6 +3202,26 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Uploads\images\img1.jpg" />
+    <Content Include="Uploads\images\img10.jpg" />
+    <Content Include="Uploads\images\img11.jpg" />
+    <Content Include="Uploads\images\img12.jpg" />
+    <Content Include="Uploads\images\img13.jpg" />
+    <Content Include="Uploads\images\img14.jpg" />
+    <Content Include="Uploads\images\img15.jpg" />
+    <Content Include="Uploads\images\img16.jpg" />
+    <Content Include="Uploads\images\img17.jpg" />
+    <Content Include="Uploads\images\img18.jpg" />
+    <Content Include="Uploads\images\img19.jpg" />
+    <Content Include="Uploads\images\img2.jpg" />
+    <Content Include="Uploads\images\img20.jpg" />
+    <Content Include="Uploads\images\img3.jpg" />
+    <Content Include="Uploads\images\img4.jpg" />
+    <Content Include="Uploads\images\img5.jpg" />
+    <Content Include="Uploads\images\img6.jpg" />
+    <Content Include="Uploads\images\img7.jpg" />
+    <Content Include="Uploads\images\img8.jpg" />
+    <Content Include="Uploads\images\img9.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
