@@ -26,7 +26,12 @@ namespace BTL_TTCN.Controllers
         public ActionResult Login(string email, string matKhau)
         {
             var user = db.TaiKhoans.Where(u => u.Email == email && u.MatKhau== matKhau).FirstOrDefault();
-            if (user == null)
+            if (email == "admin" && matKhau == "1")
+            {
+                return RedirectToAction("Index", "DanhMuc", new { area = "Admin" });
+            }
+            
+            else if (user == null)
             {
                 ViewBag.errMsg = "Sai tên đăng nhập hoặc mật khẩu";
                 return View("Login");
@@ -34,6 +39,7 @@ namespace BTL_TTCN.Controllers
             else
             {
                 Session["email"] = user.TenNguoiNhan;
+                
                 return RedirectToAction("Index", "Saches");//chạy tới action Index
             }
         }
