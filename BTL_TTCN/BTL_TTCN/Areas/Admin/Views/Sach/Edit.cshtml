@@ -48,11 +48,7 @@
                         @Html.HiddenFor(x => x.MaSach)
                         <div id="logins-part" class="content active dstepper-block" role="tabpanel" aria-labelledby="logins-part-trigger">
 
-                            <div class="form-group">
-                                <label>Mã sách</label>
-                                @Html.TextBoxFor(x => x.MaSach, new { @class = "form-control", @placeholder = "Mã sách" })
-                                @Html.ValidationMessageFor(x => x.TenSach, null, new { @class = "text-danger" })
-                            </div>
+                            
                             <div class="form-group">
                                 <label>Tên sách</label>
                                 @Html.TextBoxFor(x => x.TenSach, new { @class = "form-control", @placeholder = "Tên sách" })

@@ -26,14 +26,25 @@ namespace BTL_TTCN.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Add(DanhMuc model)
         {
+          
+
             if (ModelState.IsValid)
             {
+                if (db.DanhMucs.Any(d => d.MaDanhMuc == model.MaDanhMuc))
+                {
 
-                model.NgayTao = DateTime.Now;
-                db.DanhMucs.Add(model);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                    ViewBag.error = "Mã danh mục đã tôn tại";
+                }
+                else
+                {
+                    model.NgayTao = DateTime.Now;
+                    db.DanhMucs.Add(model);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                
             }
+
             return View(model);
         }
         public ActionResult Edit(string id)

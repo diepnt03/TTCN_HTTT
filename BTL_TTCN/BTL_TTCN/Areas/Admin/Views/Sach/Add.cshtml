@@ -49,7 +49,14 @@
                         <div class="form-group">
                             <label>Mã sách</label>
                             @Html.TextBoxFor(x => x.MaSach, new { @class = "form-control", @placeholder = "Mã sách" })
-                            @Html.ValidationMessageFor(x => x.MaSach, null, new { @class = "text-danger" })
+                            @if (@ViewBag.error != null)
+                            {
+                                <div class="text-danger">@ViewBag.error</div>
+                            }
+                            else
+                            {
+                                @Html.ValidationMessageFor(x => x.MaSach, null, new { @class = "text-danger" })
+                            }
                         </div>
                         <div class="form-group">
                             <label>Tên sách</label>

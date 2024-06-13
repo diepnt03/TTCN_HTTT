@@ -37,10 +37,18 @@ namespace BTL_TTCN.Areas.Admin.Controllers
         public ActionResult Add(Sach model)
         {
             if (ModelState.IsValid)
-            {  
-                db.Saches.Add(model);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+            {
+                if (db.Saches.Any(s => s.MaSach == model.MaSach))
+                {
+
+                    ViewBag.error = "Mã sách đã tôn tại";
+                }
+                else
+                {
+                    db.Saches.Add(model);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
             ViewBag.MaTheLoai = new SelectList(db.TheLoais.ToList(), "MaTheLoai", "TenTheLoai");
             return View(model);
