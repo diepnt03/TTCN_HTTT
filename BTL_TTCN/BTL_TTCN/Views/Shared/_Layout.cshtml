@@ -20,36 +20,8 @@
                 @Html.ActionLink("Nhà sách Phương Nam", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
                 @if (Session["email"] == null)
                 {
-                    @Html.ActionLink("Danh mục", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
-                    @Html.ActionLink("Tài khoản", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Login", "Login", "Login", new { area = "" }, new { @class = "navbar-brand" })
                 }
-                else
-                {
-                    @Html.ActionLink("Quản lý sách", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
-                    @Html.ActionLink("Bảo trì danh mục", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
-                    @Html.ActionLink("Quản lý tài khoản", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
-                    @Html.ActionLink("Bảo trì đơn hàng", "Index", "Saches", new { area = "" }, new { @class = "navbar-brand" })
-                }
-
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-
-                    @if (Session["email"] == null)
-                    {
-                        <li>
-                            <a href="/Login/Login">Login</a>
-                        </li>
-                    }
-                    else
-                    {
-                        <li>
-                            <a href = "">Welcome @Session["email"] &nbsp;|&nbsp;</a>
-                        </li>
-                        <li>  <a href="/Login/Logout">Logout</a></li>
-                    }
-
-                </ul>
             </div>
         </div>
     </div>

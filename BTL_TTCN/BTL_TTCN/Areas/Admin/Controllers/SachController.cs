@@ -66,9 +66,6 @@ namespace BTL_TTCN.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-
-
-            
                 db.Saches.Attach(model);
                 db.Entry(model).State=System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();

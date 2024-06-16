@@ -66,18 +66,19 @@
                         foreach (var item in Model)
                         {
                            
-                            <tr id="trow_@item.MaSach">
-                                <td>@i</td>
-                                <td><img class="imgproduct" data-id="@item.MaSach" src="@item.AnhMinhHoa" width="50" /></td>
-                                <td>@item.TenSach</td>
-                                <td>@item.TheLoai.TenTheLoai</td>
-                                <td>@item.SoLuong</td>
-                                <td>@item.GiaBan</td>                                
-                                <td>
-                                    <a href="/admin/sach/edit/@item.MaSach" class="btn btn-sm btn-primary">Sửa</a>
-                                    <a href="#" data-id="@item.MaSach" class="btn btn-sm btn-danger btnDelete">Xóa</a>
-                                </td>
-                            </tr>
+                    <tr id="trow_@item.MaSach">
+                        <td>@i</td>
+                        @*<td><img class="imgproduct" data-id="@item.MaSach" src="@item.AnhMinhHoa" width="50" /></td>*@
+                        <td><img class="imgproduct" data-id="@item.MaSach" src="@Url.Content("~/Uploads/images/" + item.AnhMinhHoa)" width="50" /></td>
+                        <td>@item.TenSach</td>
+                        <td>@item.TheLoai.TenTheLoai</td>
+                        <td>@item.SoLuong</td>
+                        <td>@item.GiaBan</td>
+                        <td>
+                            <a href="/admin/sach/edit/@item.MaSach" class="btn btn-sm btn-primary">Sửa</a>
+                            <a href="#" data-id="@item.MaSach" class="btn btn-sm btn-danger btnDelete">Xóa</a>
+                        </td>
+                    </tr>
                             i++;
                         }
 

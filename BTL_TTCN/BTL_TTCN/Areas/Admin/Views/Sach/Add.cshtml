@@ -120,7 +120,9 @@
         function BrowseServer(field) {
             var finder = new CKFinder();
             finder.selectActionFunction = function (fileUrl) {
-                document.getElementById(field).value = fileUrl;
+               // document.getElementById(field).value = fileUrl;
+                var fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1);
+                document.getElementById(field).value = fileName;
             };
             finder.popup();
         }

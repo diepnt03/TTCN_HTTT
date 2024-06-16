@@ -6,12 +6,7 @@
     @{Html.RenderAction("CategoryMenu", "Saches");}
 </center>
 <p></p>
-@if (Session["email"] != null)
-{
-    <p>
-        <button type="button" class="btn btn-primary" onclick="location.href='@Url.Action("Create", "Saches")'">Thêm mới</button>
-    </p>
-}
+
 
 @if (!String.IsNullOrEmpty(ViewBag.Message))
 {
@@ -33,32 +28,32 @@
         <tr>
             @foreach (var item in Model)
             {
-                <td class="centered">
-                    <p>
-                        @{
-                            var path = item.AnhMinhHoa;
-                        }
-                        <img src="@Url.Content(path)" width="150px" />
-                    </p>
-                    <p>
-                        Đánh giá: @Html.DisplayFor(modelItem => item.DanhGia)
-                    </p>
-                    <p>
-                        Thể Loại: @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
-                    </p>
-                    <p>
-                        Tên Sách: @Html.DisplayFor(modelItem => item.TenSach)
-                    </p>
-                    <p>
-                        Giá: @Html.DisplayFor(modelItem => item.GiaBan)
-                    </p>
-                    <p>
-                        Còn hàng: @Html.DisplayFor(modelItem => item.SoLuong)
-                    </p>
-                    <p>
-                        <input type="submit" value="Mua" />
-                    </p>
-                </td>
+            <td class="centered">
+                <p class="clickable-cell" data-masach="@item.MaSach">
+                    @{
+                        var path = "~/Uploads/images/" + item.AnhMinhHoa;
+                    }
+                    <img src="@Url.Content(path)" width="150px" />
+                </p>
+                <p>
+                    Đánh giá: @Html.DisplayFor(modelItem => item.DanhGia)
+                </p>
+                <p>
+                    Thể Loại: @Html.DisplayFor(modelItem => item.TheLoai.TenTheLoai)
+                </p>
+                <p>
+                    Tên Sách: @Html.DisplayFor(modelItem => item.TenSach)
+                </p>
+                <p>
+                    Giá: @Html.DisplayFor(modelItem => item.GiaBan)
+                </p>
+                <p>
+                    Còn hàng: @Html.DisplayFor(modelItem => item.SoLuong)
+                </p>
+                <p>
+                    <input type="submit" value="Mua" />
+                </p>
+            </td>
             }
         </tr>
     }
@@ -97,7 +92,7 @@
                 </td>
                 <td>
                     @{
-                        var path = item.AnhMinhHoa;
+                        var path = "~/Upload/images/" + item.AnhMinhHoa;
                         <img src="@Url.Content(path)" width="150px" />
                     }
                 </td>

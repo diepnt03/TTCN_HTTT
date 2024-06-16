@@ -110,7 +110,10 @@
         function BrowseServer(field) {
             var finder = new CKFinder();
             finder.selectActionFunction = function (fileUrl) {
-                document.getElementById(field).value = fileUrl;
+                // Lấy tên file từ URL
+                var fileName = fileUrl.substring(fileUrl.lastIndexOf('/') + 1);
+                document.getElementById(field).value = fileName;
+               // document.getElementById(field).value = fileUrl;
             };
             finder.popup();
         }
